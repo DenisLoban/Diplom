@@ -1,0 +1,13 @@
+<section  class="sky-form">
+  <h4>Категории</h4>
+  <form action="{% url 'category' %}" method="get">
+    <div class="row1 scroll-pane">
+    {% for sort in view.get_sorts %}
+    <div class="col col-4">
+       <label class="checkbox"><input type="checkbox" name="category" value="{{ sort.id }}"><i></i>{{ sort.name }}</label>
+    </div>
+    {% endfor %}
+    </div>
+    <button type="submit">Применить</button>
+  </form>
+</section>

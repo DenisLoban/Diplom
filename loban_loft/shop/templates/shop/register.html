@@ -1,0 +1,53 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+РЕГИСТРАЦИЯ
+{% endblock %}
+
+{% block content %}
+
+{% include "shop/components/header.html" %}
+<div class="single_top">
+	 <div class="container"> 
+	     <div class="register">
+		  	  <form method="post">
+				 <div class="register-top-grid">
+					 {% csrf_token %}
+					<h3>РЕГИСТРАЦИЯ</h3>
+					 <div>
+						<span>Логин<label>*</label></span>
+						 {{ form.username }}
+
+					 </div>
+<!--					 <div>-->
+<!--						<span>Last Name<label>*</label></span>-->
+<!--						<input type="text">-->
+<!--					 </div>-->
+<!--					 <div>-->
+<!--						 <span>Email Address<label>*</label></span>-->
+<!--&lt;!&ndash;						 {{ form.emai }}&ndash;&gt;-->
+<!--					 </div>-->
+
+				     <div class="register-bottom-grid">
+
+							 <div>
+								<span>Пароль<label>*</label></span>
+								 {{ form.password1 }}
+							 </div>
+							 <div>
+								<span>Повторите пароль<label>*</label></span>
+								 {{ form.password2 }}
+							 </div>
+							 <div class="clearfix"> </div>
+					 </div>
+					 <div class="clearfix"> </div>
+					   <button>OK</button>
+				 </div>
+			  </form>
+
+				</div>
+		   </div>
+     </div>
+</div>      
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+GANGA_GANGA | Профиль
+{% endblock %}
+
+{% block content %}
+{% include "shop/components/header.html" %}
+Привет
+<!--    <div class="header-bar">-->
+<!--        <h1>Profile</h1>-->
+<!--        -->
+<!--        <a href="{% url 'signin' %}">&#8592; Back</a>-->
+<!--        -->
+<!--    </div>-->
+<!--    -->
+<!--    <div class="card-body">-->
+<!--&lt;!&ndash;    {% if user.profile.profile_pic %}&ndash;&gt;-->
+<!--&lt;!&ndash;      <img src="{{ profile.profile_pic.url }}" height=100 width=100><br><br>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;      <img src="{% static 'base\images\profile\user.png' %}" height=100 width=100><br><br>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endif %}&ndash;&gt;-->
+<!--      <p><strong>Username:</strong> {{ page_user }}</p><br><br>-->
+<!--      <p><strong>Bio:</strong> {{ profile.bio }}</p><br><br>-->
+
+
+<!--      {% if user.id == profile.user.id %}-->
+<!--      <a href="{% url 'edit_user_profile' profile.id %}"><button class="button">Edit</button></a>-->
+<!--      {% endif %}-->
+<!--      -->
+<!--    -->
+<!--    -->
+<!--    </div>-->
+{% include "shop/components/footer.html" %}
+
+{% endblock content %}

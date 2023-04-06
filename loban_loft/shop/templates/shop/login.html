@@ -1,0 +1,42 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+АВТОРИЗАЦИЯ
+{% endblock %}
+
+{% block content %}
+
+{% include "shop/components/header.html" %}
+<div class="single_top">
+	 <div class="container"> 
+	    <div class="register">
+			  <div class="col-md-6 login-right">
+			  	<h3>АВТОРИЗАЦИЯ</h3>
+				<p>If you have an account with us, please log in.</p>
+				<form method="post">
+					{% csrf_token %}
+				  <div>
+					<span>Email Address<label>*</label></span>
+					  {{ form.username }}
+
+				  </div>
+				  <div>
+					<span>Password<label>*</label></span>
+					  {{ form.password }}
+
+				  </div>
+				  <a class="forgot" href="#">Забыли пароль?</a>
+					<button>OK</button>
+				  <input type="submit" value="Login">
+			    </form>
+			   </div>
+			    <div class="col-md-6 login-left">
+			  	 <h3>Создать аккаунт</h3>
+				 <p>in your account and more.</p>
+				 <a class="acount-btn" href="{% url 'signup' %}">Create an Account</a>
+			   </div>	
+			   <div class="clearfix"> </div>
+		</div>
+     </div>
+</div>
+{% endblock %}

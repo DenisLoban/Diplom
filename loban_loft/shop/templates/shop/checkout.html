@@ -1,0 +1,46 @@
+{% extends "shop/base.html" %}
+{% block title %}
+CART
+{% endblock %}
+
+
+{% block content %}
+{% include "shop/components/header.html" %}
+
+<div class="container">
+	<div class="check">	 
+
+			{% for order_item in order_item_list %}
+			{% include "shop/components/cart.html" %}
+			{% endfor %}
+	</div>
+		 <div class="col-md-3 cart-total">
+			 <a class="continue" href="#">Continue to basket</a>
+			 <div class="price-details">
+				 <h3>Price Details</h3>
+				 <span>Total</span>
+				 <span class="total1">{{ total_amount }}</span>
+				 <span>Discount</span>
+				 <span class="total1">{{ cart_amount }}</span>
+				 <div class="clearfix"></div>				 
+			 </div>	
+			 <ul class="total_price">
+			   <li class="last_price"> <h4>TOTAL</h4></li>	
+			   <li class="last_price"><span>{{ total_amount }}</span></li>
+			   <div class="clearfix"> </div>
+			 </ul>
+			
+			 
+			 <div class="clearfix"></div>
+			 <a class="order" href="#">Place Order</a>
+			 <div class="total-item">
+				 <h3>OPTIONS</h3>
+				 <h4>COUPONS</h4>
+				 <a class="cpns" href="#">Apply Coupons</a>
+				 <p><a href="{% url 'signin' %}">Log In</a> to use accounts - linked coupons</p>
+			 </div>
+
+		</div>
+</div>
+{% include "shop/components/footer.html" %}
+{% endblock %}

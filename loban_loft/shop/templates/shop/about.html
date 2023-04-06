@@ -1,0 +1,35 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+GANGA_GANGA | О нас
+{% endblock %}
+
+{% block content %}
+{% include "shop/components/header.html" %}
+
+{% for about in about_list %}
+<div class="single_top">
+	 <div class="container"> 
+	  <div class="box_4">
+	  	<div class="col-md-10 about_left">
+	  		<h1>{{ about.title}} </h1>
+	        <img src="images/banner.jpg" class="img-responsive" alt=""/>
+		    <p>{{ about.description }}</p>
+{% endfor %}
+<!--	       <div class="faqs">-->
+<!--				       <h2>Why Choose Us</h2>-->
+<!--				       <div class="questions">-->
+<!--							<h3>1.What is Lorem Ipsum?</h3>-->
+<!--	        				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>-->
+<!--	        		   </div>-->
+<!--			        		   <div class="questions">-->
+<!--									<h3>2.What is Lorem Ipsum dummy text ever since the 1500s?</h3>-->
+<!--			        				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>-->
+			        			</div>
+				   </div>
+	</div>
+	</div>
+
+
+{% include "shop/components/footer.html" %}
+{% endblock %}

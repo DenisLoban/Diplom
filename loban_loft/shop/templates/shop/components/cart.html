@@ -1,0 +1,21 @@
+
+ <div class="cart-header2">
+	 <div class="close2"> </div>
+	  <div class="cart-sec simpleCart_shelfItem">
+			<div class="cart-item cyc">
+				 <img src="{{ order_item.product.image.url }}" class="img-responsive" alt=""/>
+			</div>
+		   <div class="cart-item-info">
+			<h3><a href="#">{{ order_item.product.title }}</a><span>Model</span></h3>
+			<ul class="qty">
+				<li><p>Size : 5</p></li>
+				<li><p>Количество : {{ amount }}</p></li>
+			</ul>
+				 <div class="delivery">
+				 <p>{{ order_item.product.price }}</p>
+				 <div class="clearfix"></div>
+			</div>
+		   </div>
+			<div class="clearfix"></div>
+	  </div>
+ </div>

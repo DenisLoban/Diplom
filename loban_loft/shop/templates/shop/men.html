@@ -1,0 +1,57 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+GANGA_GANGA | Каталог
+{% endblock %}
+
+{% block content %}
+
+{% include "shop/components/header.html" %}
+<div class="container">
+<div class="women_main">
+	<div class="col-md-9 w_content">
+
+		{% include "shop/components/sort.html" %}
+
+	{% for product in product_list %}
+		{% include "shop/components/box.html" %}
+	{% endfor %}
+
+	</div>
+
+	<!-- start sidebar -->
+	<div class="col-md-3">
+	  <div class="w_sidebar">
+
+
+		{% include "shop/components/filter.html" %}
+
+	  </div>
+   </div>
+	<div class="row mt-5">
+  <div class="col-md-12 text-center">
+    <div class="site-block-27">
+      <ul>
+          {% if page_obj.has_previous %}
+              <li><a href="?page=1">&laquo;  </a></li>
+              <li><a href="?page={{ page_obj.previous_page_number }}">&lt  </a></li>
+          {% endif %}
+
+        <a class="active" href="#">{{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</a>
+
+        {% if page_obj.has_next %}
+              <li><a href="?page={{ page_obj.next_page_number }}">&gt</a></li>
+              <li><a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a></li>
+          {% endif %}
+
+      </ul>
+    </div>
+  </div>
+</div>
+	<!-- start content -->
+   <div class="clearfix"></div>
+   <!-- end content -->
+ </div>
+</div>
+{% include "shop/components/footer.html" %}
+{% endblock %}
